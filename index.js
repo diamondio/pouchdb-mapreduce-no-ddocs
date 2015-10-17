@@ -540,8 +540,6 @@ function queryViewInQueue(view, opts) {
   var shouldReduce = view.reduceFun && opts.reduce !== false;
   var skip = opts.skip || 0;
   if (typeof opts.keys !== 'undefined' && !opts.keys.length) {
-    // equivalent query
-    opts.limit = 0;
     delete opts.keys;
   }
 
